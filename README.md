@@ -13,7 +13,7 @@ To train a model first specify the raw and labeled image paths on the local mach
 Next, specify the number of images to train on, keeping in mind that the memory required to train the model increases as the number of images increases.\
 Specify the number of PCA components to keep for each image. This may have to be lowered depending on how many images are selected for training.
 Finally, select the modifications to apply to the image:\
-\t none: only PCA\
+&nbsp;&nbsp;&nbsp;&nbsp;none: only PCA\
 \t niblack: niblack thresholding\
 \t sauvola: sauvola thresholding\
 \t sav_edge: unsharp masking followed by sauvola thresholding
