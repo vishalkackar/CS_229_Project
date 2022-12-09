@@ -14,6 +14,6 @@ Next, specify the number of images to train on, keeping in mind that the memory 
 Specify the number of PCA components to keep for each image. This may have to be lowered depending on how many images are selected for training.
 Finally, select the modifications to apply to the image:\
 &nbsp;&nbsp;&nbsp;&nbsp;none: only PCA\
-\t niblack: niblack thresholding\
-\t sauvola: sauvola thresholding\
-\t sav_edge: unsharp masking followed by sauvola thresholding
+&nbsp;&nbsp;&nbsp;&nbsp;niblack: niblack thresholding\
+&nbsp;&nbsp;&nbsp;&nbsp;sauvola: sauvola thresholding\
+&nbsp;&nbsp;&nbsp;&nbsp;sav_edge: unsharp masking followed by sauvola thresholding
