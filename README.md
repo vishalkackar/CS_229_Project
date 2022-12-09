@@ -5,5 +5,5 @@ Deep and Supervised Learning Approaches to Terrain Classification on Images From
 
 Folders:\
 CNN Model - Files used to train the CNN\
-Final_Models - Trained logistic models\
+Logreg_Models - Trained logistic models\
 logreg_pca.py - File used to train the logistic regression models
