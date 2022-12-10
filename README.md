@@ -33,4 +33,4 @@ image_corruption.py:\
 -Adds image corruption to an image and a masked image. Choice of random uniform, gaussian clump, or row/columns. Choice of dead or saturated pixels.
 
 segmentation.py:\
-- Applies threshold segmentation to an image. Choice of Niblack, Sauvola, or Otsu.
+-Applies threshold segmentation to an image. Choice of Niblack, Sauvola, or Otsu.
