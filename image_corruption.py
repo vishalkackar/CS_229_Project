@@ -20,9 +20,16 @@ def create_saturated_lines(img, masked_img, n_rows, n_cols, saturation_val=255, 
     
     kwargs:
         img: image array imported from openCV
+        masked_img: masked image array imported from openCV
         n_rows: number of rows to corrupt
         n_cols: number of columns to corrupt
         saturation_val: grayscale value to set corrupted pixels to. Set to 255 (white) by default
+        masked: flag for if the image is masked (true by default)
+    
+    returns:
+        A tuple containing...
+        1) the original image array with saturated line damage
+        2) the masked image array with saturated line damage
     """
     assert(n_rows < img.shape[0])
     assert(n_cols < img.shape[1])
@@ -47,8 +54,15 @@ def create_dead_pixel_lines(img, masked_img, n_rows=10, n_cols=10, masked= True)
     
     kwargs:
         img: image array imported from openCV
+        masked_img: masked image array imported from openCV
         n_rows: number of rows to corrupt
         n_cols: number of columns to corrupt
+        masked: bool for if we have a masked image. True by default.
+    
+    Returns:
+        A tuple containing...
+        1) the original image array with dead pixel line damage
+        2) the masked image array with dead pixel line damage
     """
     assert(n_rows < img.shape[0])
     assert(n_cols < img.shape[1])
@@ -81,11 +95,15 @@ def create_random_dead_pixels(img, masked_img, n_pixels=10000, distribution='gau
         saturation_val: grayscale value to set corrupted pixels to. White (255) by default
         mean: center from which we want to create a cluster of dead pixels for gaussian 
         std: standard deviation of the cluster of dead pixels for gaussian
+    
+    Returns:
+        A tuple containing...
+        1) the original image array with uniform random or gaussian clump dead pixel damage
+        2) the masked image array with uniform random or gaussian clump dead pixel damage
     """
     assert(mean <= 1023)
     assert(n_pixels <= 1023**2)
     
-
 
     if distribution == 'uniform':
         pixel_array_x_vals_float = np.rint(np.random.uniform(0,1023,n_pixels))
@@ -143,6 +161,11 @@ def create_random_saturated_pixels(img, masked_img, n_pixels=10000, distribution
         saturation_val: grayscale value to set corrupted pixels to. White (255) by default
         mean: center from which we want to create a cluster of dead pixels for gaussian 
         std: standard deviation of the cluster of dead pixels for gaussian
+
+    Returns:
+        A tuple containing...
+        1) the original image array with uniform random or gaussian clump saturated pixel damage
+        2) the masked image array with uniform random or gaussian clump saturated pixel damage
     """
     assert(mean <= 1023)
     assert(n_pixels <= 1023**2)
