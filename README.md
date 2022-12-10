@@ -21,3 +21,16 @@ logreg_pca.py:\
 &nbsp;&nbsp;&nbsp;&nbsp;niblack: niblack thresholding\
 &nbsp;&nbsp;&nbsp;&nbsp;sauvola: sauvola thresholding\
 &nbsp;&nbsp;&nbsp;&nbsp;sav_edge: unsharp masking followed by sauvola thresholding
+
+accuracy_scoring.py:\
+-Scores image labels generated with Logistic Regression. Calculates Dice score for all desired classes, which can be either just an image mask or all of the terrain classes (soil, sand, etc.).
+
+-Option to generate image labels given trained logistic regression models and score them as you go
+
+-See code comments for specific implementation details 
+
+image_corruption.py:\
+-Adds image corruption to an image and a masked image. Choice of random uniform, gaussian clump, or row/columns. Choice of dead or saturated pixels.
+
+segmentation.py:\
+- Applies threshold segmentation to an image. Choice of Niblack, Sauvola, or Otsu.
